@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+//import hw01.rule;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -53,28 +54,18 @@ public class project extends JFrame implements ActionListener
         }
     }
 
-    public class window extends JFrame
-    {
-        public window()
-        {
-            setSize(100,100);
-            setLayout(new BorderLayout());
-            JLabel textlabel = new JLabel("fuck");
-            add(textlabel,BorderLayout.CENTER);
-        }
-    }
     public void actionPerformed(ActionEvent e)
     {
         String actionCommand = e.getActionCommand();
         if(actionCommand.equals("gg"))
         {
-            window wd = new window();
-            wd.setVisible(true);
+            rule rrr = new rule();
+            rrr.setVisible(true);
         }
         else if(actionCommand.equals("ff"))
         {
-            window wd = new window();
-            wd.setVisible(true);
+            gamepage gp = new gamepage();
+            gp.setVisible(true);
         }
     }
      

@@ -1,4 +1,4 @@
-package hw01;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,28 +6,22 @@ public class rule extends JFrame {
 	public static final int WIDTH=800;
 	public static final int HEIGHT=600;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-			rule gui=new rule();
-			gui.setVisible(true);
-	}
-
 	public rule()
 	{
 		
-		super("¹CÀ¸³W«h»¡©ú");
+		super("éŠæˆ²è¦å‰‡èªªæ˜");
 		setSize(WIDTH,HEIGHT);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		getContentPane().setBackground(Color.LIGHT_GRAY);
 		//setLayout(new BorderLayout());
-		String Demo="ª±®a¶}©l¶i¦æ¹CÀ¸®É¡A¤â¤¤·|¦³¤­±iµP¡A¤À§O¬O¤T±i­¹§÷¥d©M¨â±i§ğ¨¾¥d¡C³õ¤W«h·|¦³¤T±iÀ\ÂI¥d¡Aª±®a¶·¤À§O¨ÌÀ\ÂI¥dµP¤W©Ò»İªº­¹§÷¥XµP¡AÁÈ¨ú¸ÓÀ\ÂI¥dµP¤W¼Ğµùªºª÷ÃB¡C­n¥XµP«e¡A¥ıÂIÀ»¤â¤¤­n¥XªºµP¡A¦AÂIÀ»³õ¤WªºÀ\ÂI¥d¡A¥H§¹¦¨¥XµPªº°Ê§@"
-				+ "¡Cª±®a¨C¦^¦X·|¥ı¦¬¨ú¤@±i­¹§÷¥d¡A·íª±®a¤â¤¤ªºµPµLªk»s§@¥XÀ\ÂI®É"
-				+ "«h¥i¿ï¾Ü¨Ï¥Î§ğÀ»¥d¶i¦æ¹ï¨ä¥Lª±®aªº§ğÀ»¡C­YµL§ğÀ»¥d¡A«h¥iª½±µ½ü¨ì¤U¤@­Ó¿ï¤â¶i¦æ¹CÀ¸¡C³Ì¥ıÀò±o8¤¸ªºª±®a§Y¬°Àò³Ó¡C";
+		String Demo="ç©å®¶é–‹å§‹é€²è¡ŒéŠæˆ²æ™‚ï¼Œæ‰‹ä¸­æœƒæœ‰äº”å¼µç‰Œï¼Œåˆ†åˆ¥æ˜¯ä¸‰å¼µé£Ÿæå¡å’Œå…©å¼µæ”»é˜²å¡ã€‚å ´ä¸Šå‰‡æœƒæœ‰ä¸‰å¼µé¤é»å¡ï¼Œç©å®¶é ˆåˆ†åˆ¥ä¾é¤é»å¡ç‰Œä¸Šæ‰€éœ€çš„é£Ÿæå‡ºç‰Œï¼Œè³ºå–è©²é¤é»å¡ç‰Œä¸Šæ¨™è¨»çš„é‡‘é¡ã€‚è¦å‡ºç‰Œå‰ï¼Œå…ˆé»æ“Šæ‰‹ä¸­è¦å‡ºçš„ç‰Œï¼Œå†é»æ“Šå ´ä¸Šçš„é¤é»å¡ï¼Œä»¥å®Œæˆå‡ºç‰Œçš„å‹•ä½œ"
+		+ "ã€‚ç©å®¶æ¯å›åˆæœƒå…ˆæ”¶å–ä¸€å¼µé£Ÿæå¡ï¼Œç•¶ç©å®¶æ‰‹ä¸­çš„ç‰Œç„¡æ³•è£½ä½œå‡ºé¤é»æ™‚"
+		+ "å‰‡å¯é¸æ“‡ä½¿ç”¨æ”»æ“Šå¡é€²è¡Œå°å…¶ä»–ç©å®¶çš„æ”»æ“Šã€‚è‹¥ç„¡æ”»æ“Šå¡ï¼Œå‰‡å¯ç›´æ¥è¼ªåˆ°ä¸‹ä¸€å€‹é¸æ‰‹é€²è¡ŒéŠæˆ²ã€‚æœ€å…ˆç²å¾—8å…ƒçš„ç©å®¶å³ç‚ºç²å‹ã€‚";
 		
 		JTextArea jTextArea = new JTextArea(Demo,15,15);
 		jTextArea.setLineWrap(true);
 		jTextArea.setEditable(false);
-		jTextArea.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		jTextArea.setFont(new Font("ï¿½Lï¿½nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",Font.BOLD,32));
 	 
 	    add(new JScrollPane(jTextArea));
 	    

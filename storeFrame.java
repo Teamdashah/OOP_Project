@@ -2,8 +2,8 @@
  import java.awt.*;
  import java.awt.event.*;
   public class storeFrame extends JFrame implements ActionListener{
-  	  public static final int WIDTH =500; 
-  	  public static final int HEIGHT = 400;
+  	  public static final int WIDTH =1200; 
+  	  public static final int HEIGHT = 600;
   	  public JPanel attackCardPanel;//上方放置攻擊卡的panel
   	  public JPanel defenseCardPanel;//下方放置防禦卡的panel
   	  public JButton attackCard_1;
@@ -12,14 +12,14 @@
   	  public JButton attackCard_4;
   	  public JButton attackCard_5;
   	  public JButton attackCard_6;
-  	  public static void main(String[] args){
+  	  /*public static void main(String[] args){
   	  	  storeFrame gui =new storeFrame();
   	  	  gui.setVisible(true);
-  	  }
+  	  }*/
   	  public storeFrame(){
   	  	  super("Store");
   	  	  setSize(WIDTH,HEIGHT);
-  	  	  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  	  	  setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
   	  	  setLayout(new GridLayout(2, 1));//把整個JFrame切成兩個panel
   	  	  
   	  	  //****upContentPanel--attackCard****//
