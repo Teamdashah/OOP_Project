@@ -17,7 +17,7 @@ public class project extends JFrame implements ActionListener
     {
         setSize(WIDTH,HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
+        //setResizable(false);
         setTitle("SDGinseng");
         setLayout(new BorderLayout());
       
@@ -27,12 +27,12 @@ public class project extends JFrame implements ActionListener
         JButton introButton = new JButton("ff");
         panel.setLayout(null);
 
-        startButton.setBounds(100, 435, 175, 70);
+        startButton.setBounds(660, 690, 270, 110);
         startButton.setOpaque(false);
         //startButton.setContentAreaFilled(false);
         startButton.addActionListener(this);
 
-        introButton.setBounds(370, 435, 175, 70);
+        introButton.setBounds(1080, 690, 270, 110);
         introButton.setOpaque(false);
         //introButton.setContentAreaFilled(false);
         introButton.addActionListener(this);
@@ -43,14 +43,14 @@ public class project extends JFrame implements ActionListener
     }
     class startPage extends JPanel
     {
-        ImageIcon sdgin = new ImageIcon("coverpage.jpg");
+        ImageIcon sdgin = new ImageIcon("./picture/coverpage.jpg");
         Image sdg = sdgin.getImage();
 
         public startPage()
         {}
         public void paint(Graphics g)
         {
-            g.drawImage(sdg,0,0,null);
+            g.drawImage(sdg,500,0,null);
         }
     }
 
@@ -66,6 +66,7 @@ public class project extends JFrame implements ActionListener
         {
             gamepage gp = new gamepage();
             gp.setVisible(true);
+            dispose();
         }
     }
      
