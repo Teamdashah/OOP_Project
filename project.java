@@ -5,8 +5,8 @@ import javax.swing.*;
 import java.awt.event.*;
 public class project extends JFrame implements ActionListener
 {
-    public static final int WIDTH = 650;
-    public static final int HEIGHT = 650;
+    public static final int WIDTH = 1200;
+    public static final int HEIGHT = 800;
 
     public static void main(String[] args)
     {
@@ -26,13 +26,12 @@ public class project extends JFrame implements ActionListener
         JButton startButton = new JButton("gg");
         JButton introButton = new JButton("ff");
         panel.setLayout(null);
-
-        startButton.setBounds(660, 690, 270, 110);
+        startButton.setBounds(380, 520, 200, 100);
         startButton.setOpaque(false);
         //startButton.setContentAreaFilled(false);
         startButton.addActionListener(this);
 
-        introButton.setBounds(1080, 690, 270, 110);
+        introButton.setBounds(700, 520, 200, 100);
         introButton.setOpaque(false);
         //introButton.setContentAreaFilled(false);
         introButton.addActionListener(this);
@@ -50,7 +49,7 @@ public class project extends JFrame implements ActionListener
         {}
         public void paint(Graphics g)
         {
-            g.drawImage(sdg,500,0,null);
+            g.drawImage(sdg,250,0,null);
         }
     }
 

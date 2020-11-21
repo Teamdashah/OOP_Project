@@ -15,7 +15,7 @@ public class rule extends JFrame {
 	public rule()
 	{
 		
-		super("¹CÀ¸³W«h»¡©ú");
+		super("rule");
 		setSize(WIDTH,HEIGHT);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		// this.getContentPane().setBackground(Color.blue);
@@ -27,37 +27,34 @@ public class rule extends JFrame {
 		this.getLayeredPane().add(label, new Integer(Integer.MIN_VALUE));
 		// setLayout(new BorderLayout());
 		Box box = Box.createVerticalBox();
-		String Demo1="<¹CÀ¸°t¥ó>";
-		String Demo3="­¹§÷¥d¡B§ð¨¾¥d¡BÀ\ÂI¥d¡B¿ú¹ô";
-		String Demo2="<¹CÀ¸¬yµ{>";
-		String Demo="ª±®a¶}©l¶i¦æ¹CÀ¸®É¡A¤â¤¤·|¦³¨â±iµP¡A¬O¨â±i­¹§÷¥d¡C³õ¤W«h·|¦³¤T±iÀ\ÂI¥d¡Aª±®a¶·¤À§O¨ÌÀ\ÂI¥dµP¤W©Ò»Ýªº­¹§÷¥XµP¡AÁÈ¨ú¸ÓÀ\ÂI¥dµP¤W¼Ðµùªºª÷ÃB¡C­n¥XµP«e¡A¥ýÂIÀ»¤â¤¤­n¥XªºµP¡A¦AÂIÀ»³õ¤WªºÀ\ÂI¥d¡A¥H§¹¦¨¥XµPªº°Ê§@"
-		+ "¡Cª±®a¨C¦^¦X·|¥ý¦¬¨ú¤@±i­¹§÷¥d¡A·íª±®a¤â¤¤ªºµPµLªk»s§@¥XÀ\ÂI®É"
-		+ "«h¥i¿ï¾Ü¨Ï¥Î§ðÀ»¥d¶i¦æ¹ï¨ä¥Lª±®aªº§ðÀ»¡C­YµL§ðÀ»¥d¡A«h¥iª½±µ½ü¨ì¤U¤@­Ó¿ï¤â¶i¦æ¹CÀ¸¡C³Ì¥ýÀò±o6¤¸ªºª±®a§Y¬°Àò³Ó¡C";
-
-		// String Demo="ª±®a¶}©l¶i¦æ¹CÀ¸®É¡A¤â¤¤·|¦³¤­±iµP¡A¤À§O¬O¤T±i­¹§÷¥d©M¨â±i§ð¨¾¥d¡C³õ¤W«h·|¦³¤T±iÀ\ÂI¥d¡Aª±®a¶·¤À§O¨ÌÀ\ÂI¥dµP¤W©Ò»Ýªº­¹§÷¥XµP¡AÁÈ¨ú¸ÓÀ\ÂI¥dµP¤W¼Ðµùªºª÷ÃB¡C­n¥XµP«e¡A¥ýÂIÀ»¤â¤¤­n¥XªºµP¡A¦AÂIÀ»³õ¤WªºÀ\ÂI¥d¡A¥H§¹¦¨¥XµPªº°Ê§@"
-		// + "¡Cª±®a¨C¦^¦X·|¥ý¦¬¨ú¤@±i­¹§÷¥d¡A·íª±®a¤â¤¤ªºµPµLªk»s§@¥XÀ\ÂI®É"
-		// + "«h¥i¿ï¾Ü¨Ï¥Î§ðÀ»¥d¶i¦æ¹ï¨ä¥Lª±®aªº§ðÀ»¡C­YµL§ðÀ»¥d¡A«h¥iª½±µ½ü¨ì¤U¤@­Ó¿ï¤â¶i¦æ¹CÀ¸¡C³Ì¥ýÀò±o8¤¸ªºª±®a§Y¬°Àò³Ó¡C";
+		String Demo1="<Game component>";
+		String Demo3="Ingredients card, offensive and defensive card, meal card, coin";
+		String Demo2="<Game flow>";
+		String Demo="When the player starts the game, there will be two cards in his hand, which are two ingredient cards. There will be three meal cards on the field. Players must draw cards based on the ingredients required on the meal card to earn the amount marked on the meal card. Before playing a card, first click on the card you want to play, and then click the meal card on the field to complete the action of playing the card"
+		+ ".Players will first collect an ingredient card every round, when the card in the playerâ€™s hand cannot be used to make a meal"
+		+ "You can choose to use attack cards to attack other players. If there is no attack card, the next player can directly play the game. The first player to get $6 wins.";
 		
 		
 		jTextArea1 = new JTextArea(Demo1,2,1);
 		// jTextArea1.setBackground(Color.lightGray);
 		jTextArea1.setOpaque(false);
 		jTextArea1.setEditable(false);
-		jTextArea1.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		jTextArea1.setFont(new Font("Calibri",Font.BOLD,28));
 		box.add(jTextArea1);
 
 		jTextArea3 = new JTextArea(Demo3,2,1);
 		// jTextArea1.setBackground(Color.lightGray);
 		jTextArea3.setOpaque(false);
+		jTextArea3.setLineWrap(true);
 		jTextArea3.setEditable(false);
-		jTextArea3.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		jTextArea3.setFont(new Font("Calibri",Font.BOLD,28));
 		box.add(jTextArea3);
 
 		jTextArea2 = new JTextArea(Demo2,2,1);
 		// jTextArea2.setBackground(Color.lightGray);
 		jTextArea2.setOpaque(false);
 		jTextArea2.setEditable(false);
-		jTextArea2.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		jTextArea2.setFont(new Font("Calibri",Font.BOLD,28));
 		box.add(jTextArea2);
 
 		jTextArea = new JTextArea(Demo,15,15);
@@ -65,7 +62,7 @@ public class rule extends JFrame {
 		jTextArea.setOpaque(false);
 		jTextArea.setLineWrap(true);
 		jTextArea.setEditable(false);
-		jTextArea.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		jTextArea.setFont(new Font("Calibri",Font.BOLD,28));
 		box.add((jTextArea));
 
 
