@@ -1,29 +1,77 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.Color.*;
+import javax.swing.Box;
+
 public class rule extends JFrame {
-	public static final int WIDTH=800;
-	public static final int HEIGHT=600;
+	public static final int WIDTH=1000;
+	public static final int HEIGHT=750;
+	private final JTextArea jTextArea1;
+	private final JTextArea jTextArea2;
+	private final JTextArea jTextArea3;
+	private final JTextArea jTextArea;
 
 	public rule()
 	{
 		
-		super("éŠæˆ²è¦å‰‡èªªæ˜");
+		super("¹CÀ¸³W«h»¡©ú");
 		setSize(WIDTH,HEIGHT);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		getContentPane().setBackground(Color.LIGHT_GRAY);
-		//setLayout(new BorderLayout());
-		String Demo="ç©å®¶é–‹å§‹é€²è¡ŒéŠæˆ²æ™‚ï¼Œæ‰‹ä¸­æœƒæœ‰äº”å¼µç‰Œï¼Œåˆ†åˆ¥æ˜¯ä¸‰å¼µé£Ÿæå¡å’Œå…©å¼µæ”»é˜²å¡ã€‚å ´ä¸Šå‰‡æœƒæœ‰ä¸‰å¼µé¤é»å¡ï¼Œç©å®¶é ˆåˆ†åˆ¥ä¾é¤é»å¡ç‰Œä¸Šæ‰€éœ€çš„é£Ÿæå‡ºç‰Œï¼Œè³ºå–è©²é¤é»å¡ç‰Œä¸Šæ¨™è¨»çš„é‡‘é¡ã€‚è¦å‡ºç‰Œå‰ï¼Œå…ˆé»æ“Šæ‰‹ä¸­è¦å‡ºçš„ç‰Œï¼Œå†é»æ“Šå ´ä¸Šçš„é¤é»å¡ï¼Œä»¥å®Œæˆå‡ºç‰Œçš„å‹•ä½œ"
-		+ "ã€‚ç©å®¶æ¯å›åˆæœƒå…ˆæ”¶å–ä¸€å¼µé£Ÿæå¡ï¼Œç•¶ç©å®¶æ‰‹ä¸­çš„ç‰Œç„¡æ³•è£½ä½œå‡ºé¤é»æ™‚"
-		+ "å‰‡å¯é¸æ“‡ä½¿ç”¨æ”»æ“Šå¡é€²è¡Œå°å…¶ä»–ç©å®¶çš„æ”»æ“Šã€‚è‹¥ç„¡æ”»æ“Šå¡ï¼Œå‰‡å¯ç›´æ¥è¼ªåˆ°ä¸‹ä¸€å€‹é¸æ‰‹é€²è¡ŒéŠæˆ²ã€‚æœ€å…ˆç²å¾—8å…ƒçš„ç©å®¶å³ç‚ºç²å‹ã€‚";
+		// this.getContentPane().setBackground(Color.blue);
+		ImageIcon background = new ImageIcon("picture/ginseng.png");
+		JLabel label = new JLabel(background);
+		label.setBounds(0, 0, this.getWidth(), this.getHeight());
+		JPanel imagePanel = (JPanel) this.getContentPane();
+		imagePanel.setOpaque(false);
+		this.getLayeredPane().add(label, new Integer(Integer.MIN_VALUE));
+		// setLayout(new BorderLayout());
+		Box box = Box.createVerticalBox();
+		String Demo1="<¹CÀ¸°t¥ó>";
+		String Demo3="­¹§÷¥d¡B§ğ¨¾¥d¡BÀ\ÂI¥d¡B¿ú¹ô";
+		String Demo2="<¹CÀ¸¬yµ{>";
+		String Demo="ª±®a¶}©l¶i¦æ¹CÀ¸®É¡A¤â¤¤·|¦³¨â±iµP¡A¬O¨â±i­¹§÷¥d¡C³õ¤W«h·|¦³¤T±iÀ\ÂI¥d¡Aª±®a¶·¤À§O¨ÌÀ\ÂI¥dµP¤W©Ò»İªº­¹§÷¥XµP¡AÁÈ¨ú¸ÓÀ\ÂI¥dµP¤W¼Ğµùªºª÷ÃB¡C­n¥XµP«e¡A¥ıÂIÀ»¤â¤¤­n¥XªºµP¡A¦AÂIÀ»³õ¤WªºÀ\ÂI¥d¡A¥H§¹¦¨¥XµPªº°Ê§@"
+		+ "¡Cª±®a¨C¦^¦X·|¥ı¦¬¨ú¤@±i­¹§÷¥d¡A·íª±®a¤â¤¤ªºµPµLªk»s§@¥XÀ\ÂI®É"
+		+ "«h¥i¿ï¾Ü¨Ï¥Î§ğÀ»¥d¶i¦æ¹ï¨ä¥Lª±®aªº§ğÀ»¡C­YµL§ğÀ»¥d¡A«h¥iª½±µ½ü¨ì¤U¤@­Ó¿ï¤â¶i¦æ¹CÀ¸¡C³Ì¥ıÀò±o6¤¸ªºª±®a§Y¬°Àò³Ó¡C";
+
+		// String Demo="ª±®a¶}©l¶i¦æ¹CÀ¸®É¡A¤â¤¤·|¦³¤­±iµP¡A¤À§O¬O¤T±i­¹§÷¥d©M¨â±i§ğ¨¾¥d¡C³õ¤W«h·|¦³¤T±iÀ\ÂI¥d¡Aª±®a¶·¤À§O¨ÌÀ\ÂI¥dµP¤W©Ò»İªº­¹§÷¥XµP¡AÁÈ¨ú¸ÓÀ\ÂI¥dµP¤W¼Ğµùªºª÷ÃB¡C­n¥XµP«e¡A¥ıÂIÀ»¤â¤¤­n¥XªºµP¡A¦AÂIÀ»³õ¤WªºÀ\ÂI¥d¡A¥H§¹¦¨¥XµPªº°Ê§@"
+		// + "¡Cª±®a¨C¦^¦X·|¥ı¦¬¨ú¤@±i­¹§÷¥d¡A·íª±®a¤â¤¤ªºµPµLªk»s§@¥XÀ\ÂI®É"
+		// + "«h¥i¿ï¾Ü¨Ï¥Î§ğÀ»¥d¶i¦æ¹ï¨ä¥Lª±®aªº§ğÀ»¡C­YµL§ğÀ»¥d¡A«h¥iª½±µ½ü¨ì¤U¤@­Ó¿ï¤â¶i¦æ¹CÀ¸¡C³Ì¥ıÀò±o8¤¸ªºª±®a§Y¬°Àò³Ó¡C";
 		
-		JTextArea jTextArea = new JTextArea(Demo,15,15);
+		
+		jTextArea1 = new JTextArea(Demo1,2,1);
+		// jTextArea1.setBackground(Color.lightGray);
+		jTextArea1.setOpaque(false);
+		jTextArea1.setEditable(false);
+		jTextArea1.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		box.add(jTextArea1);
+
+		jTextArea3 = new JTextArea(Demo3,2,1);
+		// jTextArea1.setBackground(Color.lightGray);
+		jTextArea3.setOpaque(false);
+		jTextArea3.setEditable(false);
+		jTextArea3.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		box.add(jTextArea3);
+
+		jTextArea2 = new JTextArea(Demo2,2,1);
+		// jTextArea2.setBackground(Color.lightGray);
+		jTextArea2.setOpaque(false);
+		jTextArea2.setEditable(false);
+		jTextArea2.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		box.add(jTextArea2);
+
+		jTextArea = new JTextArea(Demo,15,15);
+		// jTextArea.setBackground(Color.lightGray);
+		jTextArea.setOpaque(false);
 		jTextArea.setLineWrap(true);
 		jTextArea.setEditable(false);
-		jTextArea.setFont(new Font("ï¿½Lï¿½nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",Font.BOLD,32));
+		jTextArea.setFont(new Font("·L³n¥¿¶ÂÅé",Font.BOLD,32));
+		box.add((jTextArea));
+
+
+		add(box);
 	 
-	    add(new JScrollPane(jTextArea));
+	    //add(new JScrollPane(jTextArea));
 	    
 	   
 	}
